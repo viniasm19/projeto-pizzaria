@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="628.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.sp.pizzaria.controller.ClienteController">
+   <children>
+      <Label layoutX="14.0" layoutY="17.0" text="ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="100.0" layoutY="17.0" text="Telefone:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfId" editable="false" layoutX="44.0" layoutY="12.0" prefHeight="30.0" prefWidth="45.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfTelefone" layoutX="169.0" layoutY="13.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+
+      <Label layoutX="349.0" layoutY="19.0" text="Aniversário:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpNiver" layoutX="439.0" layoutY="16.0" prefHeight="25.0" prefWidth="153.0" promptText="dd/mm/aaaa" />
+
+      <Label layoutX="13.0" layoutY="55.0" text="Nome:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+
+      <TextField fx:id="tfNome" layoutX="75.0" layoutY="50.0" prefHeight="25.0" prefWidth="518.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+
+
+      <Label layoutX="13.0" layoutY="87.0" text="End.:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="taEndereco" layoutX="75.0" layoutY="90.0" prefHeight="73.0" prefWidth="518.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <Button layoutX="15.0" layoutY="172.0" mnemonicParsing="false" onAction="#salvar" prefHeight="40.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icones/iconesalvar.png" />
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="75.0" layoutY="172.0" mnemonicParsing="false" onAction="#excluir" prefHeight="40.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/iconexcluir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="134.0" layoutY="172.0" mnemonicParsing="false" onAction="#limpar" prefHeight="48.0" prefWidth="56.0">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/iconelimpar.png" />
+               </image></ImageView>
+         </graphic>
+      </Button>
+
+      <Button layoutX="193.0" layoutY="172.0" mnemonicParsing="false" onAction="#buscar" prefHeight="48.0" prefWidth="53.0">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/iconebuscar.png" />
+               </image></ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="tbCliente" layoutX="13.0" layoutY="233.0" prefHeight="382.0" prefWidth="576.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="64.0" text="ID" />
+          <TableColumn fx:id="colNome" prefWidth="335.0" text="Nome" />
+            <TableColumn fx:id="colTelefone" minWidth="0.0" prefWidth="176.0" text="Telefone" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.senac.sp.pizzaria.controller.InicialController">
+   <children>
+      <MenuBar layoutX="71.0" layoutY="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Cadastro">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cadCliente" text="Cliente" />
+                  <MenuItem mnemonicParsing="false" onAction="#cadPizza" text="Pizza" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Pedido">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#pedido" text="Novo Pedido" />
+                  <MenuItem mnemonicParsing="false" onAction="#verPedidos" text="Ver Pedidos" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
